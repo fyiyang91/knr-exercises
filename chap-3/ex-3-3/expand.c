@@ -25,8 +25,8 @@ char res_buf[BUF_MAX_LEN] = {0};
 
 int main(void) {
 	
-	char *test_seq[] = {"----0-1-3a-fA-B-Z---", "0-1-3a-b-c-d-zA-B-Z-", "0z-Z--", "---blabla89jk----", "-- afsd--",
-			"------", "", "0--2--", "jT-Z-B--", "---------------------------bbb-----------"}; 
+	char *test_seq[] = {"----0-1-3a-fA-B-Z---", "0-1-3a-b-c-d-zA-B-Z-", "0z-Z--", "---blabla89jk----",
+	"-- afsd--", "------", "", "0--2--", "jT-Z-B--", "---------------------------bbb-----------"}; 
 	// char res_buf[BUF_MAX_LEN] = {0};
 	int test_len = sizeof(test_seq) / sizeof(test_seq[0]);
 	int status, i;
@@ -96,9 +96,9 @@ int expand(char *s1, char *s2, int s2_buf_len) {
 					if ((isupper(*s_st) && !isupper(check_c)) ||
 						(islower(*s_st) && !islower(check_c)))  return -1;					
 					if (*s_st >= check_c) {
-						for (temp_c = check_c + 1; temp_c < *s_st; temp_c++)  s2[i++] = temp_c;
+						for (temp_c = check_c + 1; temp_c < *s_st; temp_c++) s2[i++] = temp_c;
 					} else {
-						for (temp_c = check_c - 1; temp_c > *s_st; temp_c--)  s2[i++] = temp_c;
+						for (temp_c = check_c - 1; temp_c > *s_st; temp_c--) s2[i++] = temp_c;
 					}	
 					check_c = *s_st;
 					state = STATE1;
