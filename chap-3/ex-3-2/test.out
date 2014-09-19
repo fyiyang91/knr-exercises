@@ -1,10 +1,12 @@
 raw text is:
 Mysterious string in the next line, 
-did you find it?"Encore"
+did you find it?		
+"Encore"
 escape text is:
-Mysterious string in the next line, \ndid you find it\?\v\"Encore\"\0
+Mysterious string in the next line, \ndid you find it\?\t\t\n\"Encore\"\0
 
 
 reverse operation, the unescaped text is:
 Mysterious string in the next line, 
-did you find it?"Encore"
+did you find it?		
+"Encore"

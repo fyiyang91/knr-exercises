@@ -8,7 +8,7 @@ void unescape(char *, char *);
 
 
 int main(void) {
-	char raw_buf[1024] = "Mysterious string in the next line, \ndid you find it?\v\"Encore\"";
+	char raw_buf[1024] = "Mysterious string in the next line, \ndid you find it?\t\t\n\"Encore\"";
 	char escape_buf[1024]; 
 	
 	escape (escape_buf, raw_buf);
