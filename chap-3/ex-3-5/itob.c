@@ -1,5 +1,5 @@
-/* Exercise 3-5.Write the function itob(n,s,b)that converts the integer n into a base bcharacter representation in the string 
-s. In particular, itob(n,s,16) formats sas a hexadecimal integer in s. */
+/* Exercise 3-5.Write the function itob(n,s,b)that converts the integer n into a base bcharacter representation in 
+the strings. In particular, itob(n,s,16) formats sas a hexadecimal integer in s. */
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>

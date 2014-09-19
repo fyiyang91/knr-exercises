@@ -1,0 +1,13 @@
+reverse() test:
+before reverse: Is it there?
+after reverse: ?ereht ti sI
+
+itoa() test:
+raw int 127 is converted to:
+127
+
+raw int -128 is converted to:
+-128
+
+raw int -2147483648 is converted to:
+-2147483648

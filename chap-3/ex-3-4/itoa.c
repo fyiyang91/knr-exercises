@@ -1,10 +1,10 @@
-/* Exercise 3-4.In a two's complement number representation, our version of itoa does not handle the largest negative number,
-that is, the value of nequal to -(2^(wordsize-1)). Explain why not. Modify it to print that value correctly, regardless of the
-machine on which it runs. */
+/* Exercise 3-4.In a two's complement number representation, our version of itoa does not handle the largest 
+negative number, that is, the value of nequal to -(2^(wordsize-1)). Explain why not. Modify it to print that 
+value correctly, regardless of the machine on which it runs. */
 
-/* Solution: In original code, the negative number is converted to its complement, e.g. -128 becomes 0. Howver if WORDSIZE is 8,
--128 is 0b1000_0000. In two's complement system, flip the sign bit, it becomes 0 (0b0000_0000), The remedy is to use the negative
-number for computation, as marked in te code below*/ 
+/* Solution: In original code, the negative number is converted to its complement, e.g. -128 becomes 0. However
+if WORDSIZE is 8, -128 is 0b1000_0000. In two's complement system, flip the sign bit, it becomes 0 (0b0000_0000), 
+The remedy is to use the negative number for computation, as marked in te code below*/ 
 
 #include <stdio.h>
 #include <string.h>
@@ -25,11 +25,11 @@ static void test_reverse(void) {
 static void test_itoa(void) {
 	char buf[1024] = {0};
 	itoa(127, buf);
-	printf("%s\n", buf);
+	printf("raw int %d is converted to:\n%s\n", 127, buf);
 	itoa(-128, buf);
-	printf("%s\n", buf);
+	printf("\nraw int %d is converted to:\n%s\n", -128, buf);
 	itoa(1 << 31, buf); /* int is 32 bit in size, hence the test */
-	printf("%s\n", buf);
+	printf("\nraw int %d is converted to:\n%s\n", 1 << 31, buf);
 }
 
 int main(void) {

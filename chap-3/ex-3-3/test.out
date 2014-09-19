@@ -1,0 +1,14 @@
+test #0, raw string: 
+----0-1-3a-fA-B-Z---
+expanded string :
+----0123abcdefBCDEFGHIJKLMNOPQRSTUVWXYZZ---
+
+test #1, raw string: 
+0-1-3a-b-c-d-zA-B-Z-
+expanded string :
+0123abcdefghijklmnopqrstuvwxyzBCDEFGHIJKLMNOPQRSTUVWXYZZ-
+
+test #2, raw string: 
+0z-Z--
+raw string is INVALID!
+

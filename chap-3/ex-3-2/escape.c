@@ -1,6 +1,6 @@
-/* Exercise 3-2.Write a function escape(s,t)that converts characters like newline and tab into visible escape sequences like \nand \t as it 
-copies the string t to s. Use a switch. Write a function for the other direction as well, converting escape sequences into the real characters. 
-*/
+/* Exercise 3-2.Write a function escape(s,t)that converts characters like newline and tab into visible escape sequences
+like \nand \t as it copies the string t to s. Use a switch. Write a function for the other direction as well, converting
+escape sequences into the real characters. */
 #include <stdio.h>
 
 void escape(char *, char *);
@@ -59,18 +59,18 @@ void escape(char *t, char *s) {
 
 	while (*s != '\0') {
 		switch (*s) {
-			case '\a':	*t++ = '\\'; *t++ = 'a'; break;
-			case '\b':	*t++ = '\\'; *t++ = 'b'; break;
-			case '\f': 	*t++ = '\\'; *t++ = 'f'; break;
-			case '\n': 	*t++ = '\\'; *t++ = 'n'; break;
-			case '\r':	*t++ = '\\'; *t++ = 'r'; break;
-			case '\t':	*t++ = '\\'; *t++ = 't'; break;
-			case '\v':	*t++ = '\\'; *t++ = 'v'; break;
-			case '\\': 	*t++ = '\\'; *t++ = '\\';break;
-			case '\'':	*t++ = '\\'; *t++ = '\\';break;
-			case '\"':	*t++ = '\\'; *t++ = '\"';break;
-			case '\?':	*t++ = '\\'; *t++ = '\?';break;
-			default:	*t++ = *s; break;
+			case '\a': *t++ = '\\'; *t++ = 'a'; break;
+			case '\b': *t++ = '\\'; *t++ = 'b'; break;
+			case '\f': *t++ = '\\'; *t++ = 'f'; break;
+			case '\n': *t++ = '\\'; *t++ = 'n'; break;
+			case '\r': *t++ = '\\'; *t++ = 'r'; break;
+			case '\t': *t++ = '\\'; *t++ = 't'; break;
+			case '\v': *t++ = '\\'; *t++ = 'v'; break;
+			case '\\': *t++ = '\\'; *t++ = '\\';break;
+			case '\'': *t++ = '\\'; *t++ = '\\';break;
+			case '\"': *t++ = '\\'; *t++ = '\"';break;
+			case '\?': *t++ = '\\'; *t++ = '\?';break;
+			default: *t++ = *s; break;
 		}		
 		s++;
 	}
