@@ -1,14 +1,45 @@
 test #0, raw string: 
 ----0-1-3a-fA-B-Z---
 expanded string :
-----0123abcdefBCDEFGHIJKLMNOPQRSTUVWXYZZ---
+----0123abcdefABCDEFGHIJKLMNOPQRSTUVWXYZ---
 
 test #1, raw string: 
 0-1-3a-b-c-d-zA-B-Z-
 expanded string :
-0123abcdefghijklmnopqrstuvwxyzBCDEFGHIJKLMNOPQRSTUVWXYZZ-
+0123abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-
 
 test #2, raw string: 
 0z-Z--
+raw string is INVALID!
+
+test #3, raw string: 
+---blabla89jk----
+expanded string :
+---blabla89jk----
+
+test #4, raw string: 
+-- afsd--
+raw string is INVALID!
+
+test #5, raw string: 
+------
+expanded string :
+------
+
+test #6, raw string: 
+
+raw string is INVALID!
+
+test #7, raw string: 
+0--2--
+raw string is INVALID!
+
+test #8, raw string: 
+jT-Z-B--
+expanded string :
+jTUVWXYZYXWVUTSRQPONMLKJIHGFEDCB--
+
+test #9, raw string: 
+---------------------------bbb-----------
 raw string is INVALID!
 
