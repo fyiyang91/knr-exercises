@@ -81,24 +81,24 @@ int expand(char *s1, char *s2, int s2_buf_len) {
 					if (isdigit(*s_st)) state = STATE2;
 					else if (!(isupper(*s_st) || islower(*s_st))) return -1;
 				} 
-				break;						
+				break;					
 			case STATE2: 
 				s2[i++] = check_c;
 				if (*s_st == '-')  state = STATE4;
 				else {
 					check_c = *s_st;
 					if (islower(*s_st) || isupper(*s_st)) state = STATE1;
-					else if (!isdigit(*s_st)) return -1;
+				else if (!isdigit(*s_st)) return -1;
 				} break;	
 			case STATE3:
 				if (isupper(*s_st) || islower(*s_st)) {
 					char temp_c;
 					if ((isupper(*s_st) && !isupper(check_c)) ||
-						(islower(*s_st) && !islower(check_c)))  return -1;					
+						(islower(*s_st) && !islower(check_c)))  return -1;
 					if (*s_st >= check_c) {
-					  for (temp_c = check_c + 1; temp_c < *s_st; temp_c++) s2[i++] = temp_c;
+						for (temp_c = check_c + 1; temp_c < *s_st; temp_c++) s2[i++] = temp_c;
 					} else {
-				          for (temp_c = check_c - 1; temp_c > *s_st; temp_c--) s2[i++] = temp_c;
+						for (temp_c = check_c - 1; temp_c > *s_st; temp_c--) s2[i++] = temp_c;
 					}	
 					check_c = *s_st;
 					state = STATE1;
@@ -122,7 +122,7 @@ int expand(char *s1, char *s2, int s2_buf_len) {
 		s_st++;
 	}
 	if (state & (STATE1 | STATE2)) s2[i++] = check_c; 	
-        for (s_end++; *s_end != '\0'; s_end++)  s2[i++] = *s_end;		
+        for (s_end++; *s_end != '\0'; s_end++)  s2[i++] = *s_end;
 	s2[i] = '\0';
 	return 0;
 }
