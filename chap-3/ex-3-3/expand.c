@@ -96,9 +96,9 @@ int expand(char *s1, char *s2, int s2_buf_len) {
 					if ((isupper(*s_st) && !isupper(check_c)) ||
 						(islower(*s_st) && !islower(check_c)))  return -1;					
 					if (*s_st >= check_c) {
-						for (temp_c = check_c + 1; temp_c < *s_st; temp_c++) s2[i++] = temp_c;
+					  for (temp_c = check_c + 1; temp_c < *s_st; temp_c++) s2[i++] = temp_c;
 					} else {
-						for (temp_c = check_c - 1; temp_c > *s_st; temp_c--) s2[i++] = temp_c;
+				          for (temp_c = check_c - 1; temp_c > *s_st; temp_c--) s2[i++] = temp_c;
 					}	
 					check_c = *s_st;
 					state = STATE1;
@@ -109,9 +109,9 @@ int expand(char *s1, char *s2, int s2_buf_len) {
 					char temp_c;
 					if (isdigit(*s_st) && !isdigit(check_c))  return -1;
 					if (*s_st >= check_c) {
-						for (temp_c = check_c + 1; temp_c < *s_st; temp_c++)  s2[i++] = temp_c;
+				    	  for (temp_c = check_c + 1; temp_c < *s_st; temp_c++) s2[i++] = temp_c;
 					} else {
-						for (temp_c = check_c - 1; temp_c > *s_st; temp_c--)  s2[i++] = temp_c;
+					  for (temp_c = check_c - 1; temp_c > *s_st; temp_c--) s2[i++] = temp_c;
 					}	
 					check_c = *s_st;
 					state = STATE2;
