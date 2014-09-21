@@ -52,4 +52,3 @@ void eval(int query, int res) {
 	else	printf("%d found at index %d\n", query, res);	
 }
 
-
