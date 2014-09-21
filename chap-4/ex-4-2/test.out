@@ -1,0 +1,48 @@
+test 0: 
+INVALID!
+
+test 1:  	
+INVALID!
+
+test 2:   123.34  
+result: 123.34
+
+test 3:  123
+result: 123
+
+test 4: 123.
+INVALID!
+
+test 5: 13j
+INVALID!
+
+test 6: .34
+result: 0.34
+
+test 7: -13.45 
+result: -13.45
+
+test 8: -123.45e-1
+result: -12.345
+
+test 9:  -123.45E+3
+result: -123450
+
+test 10:   123.45-5  
+INVALID!
+
+test 11: 12.random 
+INVALID!
+
+test 12:  122.34e11  rnd
+INVALID!
+
+test 13:  .23e5		
+result: 23000
+
+test 14: .23e-5
+result: 2.3e-06
+
+test 15: random stuff..
+INVALID!
+
