@@ -99,22 +99,15 @@ int getop2(char s[]) {
 	if (c1 == '+' || c1 == '-') {
 		c2 = getch();
 		if (!isdigit(c2) && c2 != '.') {
+			// '+' or '-' as operator
 			ungetch(c2);
 			return c1;	
 		} 	
 		i = 0; 
 		s[++i] = c1 = c2;
-		if (isdigit(c1))
-			while (isdigit(s[++i] = c1 = getch())); // integer part
-		if (c1 == '.')
-			while (isdigit(s[++i] = c1 = getch())); // fraction part
-		s[i] = '\0';
-		if (c1 != EOF)  ungetch(c1);
-		return NUMBER;
-	}
+	} else if (!isdigit(c1) && c1 != '.') return c1; // not a number
+	else i = 0;	
 
-	if (!isdigit(c1) && c1 != '.') return c1; // not a number
-	i = 0;
 	if (isdigit(c1))
 		while (isdigit(s[++i] = c1 = getch())); // integer part
 	if (c1 == '.')
@@ -122,7 +115,6 @@ int getop2(char s[]) {
 	s[i] = '\0';
 	if (c1 != EOF)  ungetch(c1);
 	return NUMBER;	
-
 }
 
 /*********************************************copy begin**************************************************/
