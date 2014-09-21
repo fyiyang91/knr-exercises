@@ -1,64 +1,64 @@
 Test #0
 FIND PATTERN FROM LEFT TO RIGHT:
-Raw text is "this is some text isn't it?"
-Pattern "is" starts at index: 2
+Raw text "this is some text isn't it?"
+Pattern "is" at index: 2
 The string that starts the pattern is: 
 is is some text isn't it?
 
 FIND PATTERN FROM RIGHT TO LEFT:
-Raw text is "this is some text isn't it?"
-Pattern "is" starts at index: 18
+Raw text "this is some text isn't it?"
+Pattern "is" at index: 18
 The string that starts the pattern is: 
 isn't it?
 
 Test #1
 FIND PATTERN FROM LEFT TO RIGHT:
-Raw text is "ABEABABABABD ABCFGABC"
-Pattern "ABC" starts at index: 13
+Raw text "ABEABABABABD ABCFGABC"
+Pattern "ABC" at index: 13
 The string that starts the pattern is: 
 ABCFGABC
 
 FIND PATTERN FROM RIGHT TO LEFT:
-Raw text is "ABEABABABABD ABCFGABC"
-Pattern "ABC" starts at index: 18
+Raw text "ABEABABABABD ABCFGABC"
+Pattern "ABC" at index: 18
 The string that starts the pattern is: 
 ABC
 
 Test #2
 FIND PATTERN FROM LEFT TO RIGHT:
-Raw text is "	ABCdefABC ABABCHi
+Raw text "	ABCdefABC ABABCHi
 ABCABd"
-Pattern "ABC" starts at index: 1
+Pattern "ABC" at index: 1
 The string that starts the pattern is: 
 ABCdefABC ABABCHi
 ABCABd
 
 FIND PATTERN FROM RIGHT TO LEFT:
-Raw text is "	ABCdefABC ABABCHi
+Raw text "	ABCdefABC ABABCHi
 ABCABd"
-Pattern "ABC" starts at index: 19
+Pattern "ABC" at index: 19
 The string that starts the pattern is: 
 ABCABd
 
 Test #3
 FIND PATTERN FROM LEFT TO RIGHT:
-Raw text is " dd"
-Pattern "" starts at index: 0
+Raw text " dd"
+Pattern "" at index: 0
 The string that starts the pattern is: 
  dd
 
 FIND PATTERN FROM RIGHT TO LEFT:
-Raw text is " dd"
-Pattern "" starts at index: 3
+Raw text " dd"
+Pattern "" at index: 3
 The string that starts the pattern is: 
 
 
 Test #4
 FIND PATTERN FROM LEFT TO RIGHT:
-Raw text is:""
+Raw text ""
 Pattern "" not found
 
 FIND PATTERN FROM RIGHT TO LEFT:
-Raw text is:""
+Raw text ""
 Pattern "" not found
 
