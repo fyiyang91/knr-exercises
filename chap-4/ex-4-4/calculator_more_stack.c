@@ -2,9 +2,10 @@
 and to swap the top two elements. Add a command to clear the stack. */
 
 /* Extended commands:
-print top of stack: p(P)
-swap top two elems: s(S)
-clear stack: c(C)
+print top of stack:'p' 
+swap top two elems: 's'
+clear stack: 'c'
+duplicate the top: 'd'
 */
 
 #include <stdio.h>
@@ -18,6 +19,7 @@ int getop2(char []); // modified getop() function
 void push(double);
 double pop(void);
 void clearall(void);
+void dup(void);
 void printtop(void);
 void swaptop2(void);
 
@@ -60,13 +62,10 @@ int main(void) {
 			case '\n':
 				printf("\t%.8g\n", pop());
 				break;
-			
-			case 'p':
-			case 'P': printtop(); break;	
-			case 's':
-			case 'S': swaptop2(); break;
-			case 'c':
-			case 'C': clearall(); break;
+			case 'd': dup(); break;	
+			case 'p': printtop(); break;	
+			case 's': swaptop2(); break;
+			case 'c': clearall(); break;
 			default:
 				printf("error: unknown command %s\n", s);
 		}
@@ -118,6 +117,17 @@ void swaptop2(void) {
 	}
 	else printf ("error: less than 2 elems on stack\n");
 }
+
+/* dup: duplacate the top element */
+void dup(void) {
+	extern double val[];
+	if (sp > 0) {
+		val[sp] = val[sp - 1];
+		sp++;
+	}	
+	else printf("error: stack empty\n");
+}
+
 #include <ctype.h>
 
 int getch(void);
